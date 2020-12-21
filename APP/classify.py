@@ -23,7 +23,7 @@ class Classify():
         self.loaded_model = load_model('APP/Data/classify_best_model.h5')
 
     def classification(self, question):
-        if list(question) == list("Summary_Test1"):
+        if list(question)[:-1] == list("Summary_Test"):
             return 2
 
         new_sentence = okt.morphs(question, stem=True)                                      # 토큰화
